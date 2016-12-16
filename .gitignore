@@ -15,6 +15,3 @@ bower_components
 *.ipr
 *.iws
 .idea/
-
-# Project
-build

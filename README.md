@@ -53,3 +53,4 @@ npm run dev
 - Maths and co-ordinates: http://www.redblobgames.com/grids/hexagons/
 - Pixel to hexagon: http://www.redblobgames.com/grids/hexagons/more-pixel-to-hex.html 
 - Interesting notes on hex grids: http://www.gamasutra.com/blogs/HermanTulleken/20140912/225495/20_Fun_Grid_Facts_Hex_Grids.php
+- Time based (delta) animation: https://www.viget.com/articles/time-based-animation

@@ -1,4 +1,4 @@
-import { FogExp2, CameraHelper, PCFSoftShadowMap } from 'three';
+import { FogExp2, PCFSoftShadowMap } from 'three';
 
 import * as C from '../../constants';
 import { OnWindowResize } from './on-window-resize';
@@ -39,10 +39,6 @@ export const Init = (scene, renderer, camera, light, stats) => {
   // Enable shadow rendering.
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = PCFSoftShadowMap;
-
-  // Shadow camera helper.
-  const shadowCamera = new CameraHelper(light.shadow.camera);
-  scene.add(shadowCamera);
 
   // Stats.
   container.appendChild(stats.dom);

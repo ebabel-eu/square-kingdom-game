@@ -12,9 +12,9 @@ export const LIGHT_COLOR = COLORS.WHITE;
 export const LIGHT_INTENSITY = 0.88;
 export const LIGHT_ANGLE = Math.PI / 4;
 export const LIGHT_POSITION = {
-  X: 0,
+  X: 3,
   Y: 3,
-  Z: 3,
+  Z: 1,
 };
 
 // Fog.
