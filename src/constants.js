@@ -12,14 +12,14 @@ export const LIGHT_COLOR = COLORS.WHITE;
 export const LIGHT_INTENSITY = 0.88;
 export const LIGHT_ANGLE = Math.PI / 4;
 export const LIGHT_POSITION = {
-  X: -1,
-  Y: 0,
+  X: 0,
+  Y: 3,
   Z: 3,
 };
 
 // Fog.
 export const FOG_COLOR = COLORS.GREY;
-export const FOG_DENSITY = 0.1;
+export const FOG_DENSITY = 0.05;
 
 // Camera.
 export const CAMERA_POSITION = {
@@ -31,6 +31,7 @@ export const CAMERA_POSITION = {
 // Square.
 export const PLAYER_SQUARE_COLOR = COLORS.GREEN;
 export const ENEMY_SQUARE_COLOR = COLORS.RED;
+export const NEUTRAL_SQUARE_COLOR = COLORS.GREY;
 
 // GUI.
 export const GUI = {
