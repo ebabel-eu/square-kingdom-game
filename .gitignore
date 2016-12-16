@@ -1,0 +1,20 @@
+# Node.js and npm
+node_modules
+bower_components
+*.log
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# MacOS
+.DS_Store
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Project
+build
