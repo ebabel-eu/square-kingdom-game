@@ -62513,17 +62513,18 @@
 	  BLACK: 0x000000,
 	  GREY: 0xCCCCCC,
 	  GREEN: 0x00FF00,
-	  RED: 0xFF0000
+	  RED: 0xFF0000,
+	  AMBER: 0xFFC200
 	};
 	
 	// Light.
 	var LIGHT_COLOR = exports.LIGHT_COLOR = COLORS.WHITE;
-	var LIGHT_INTENSITY = exports.LIGHT_INTENSITY = 0.88;
+	var LIGHT_INTENSITY = exports.LIGHT_INTENSITY = 1.25;
 	var LIGHT_ANGLE = exports.LIGHT_ANGLE = Math.PI / 4;
 	var LIGHT_POSITION = exports.LIGHT_POSITION = {
 	  X: 3,
 	  Y: 3,
-	  Z: 1
+	  Z: 3
 	};
 	
 	// Fog.
@@ -62540,7 +62541,7 @@
 	// Square.
 	var PLAYER_SQUARE_COLOR = exports.PLAYER_SQUARE_COLOR = COLORS.GREEN;
 	var ENEMY_SQUARE_COLOR = exports.ENEMY_SQUARE_COLOR = COLORS.RED;
-	var NEUTRAL_SQUARE_COLOR = exports.NEUTRAL_SQUARE_COLOR = COLORS.GREY;
+	var NEUTRAL_SQUARE_COLOR = exports.NEUTRAL_SQUARE_COLOR = COLORS.AMBER;
 	
 	// GUI.
 	var GUI = exports.GUI = {
@@ -62550,17 +62551,17 @@
 	    STEP: 0.01
 	  },
 	  LIGHT_POSITION_X: {
-	    MIN: -6,
-	    MAX: 6,
-	    STEP: 0.1
-	  },
-	  LIGHT_POSITION_Y: {
 	    MIN: -3,
 	    MAX: 3,
 	    STEP: 0.1
 	  },
+	  LIGHT_POSITION_Y: {
+	    MIN: 3,
+	    MAX: 6,
+	    STEP: 0.1
+	  },
 	  LIGHT_POSITION_Z: {
-	    MIN: 0.5,
+	    MIN: 3,
 	    MAX: 6,
 	    STEP: 0.1
 	  },
@@ -63148,63 +63149,63 @@
 	  // First circle.
 	  {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -1,
 	    y: 1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 0,
 	    y: 1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
 	    y: 1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
 	    y: 0
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
 	    y: -1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
 	    y: -1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 0,
 	    y: -1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -1,
 	    y: -1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -1,
@@ -63214,112 +63215,112 @@
 	  // Second circle.
 	  {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -2,
 	    y: 2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -1,
 	    y: 2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 0,
 	    y: 2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
 	    y: 2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 2,
 	    y: 2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 2,
 	    y: 1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 2,
 	    y: 0
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 2,
 	    y: -1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 2,
 	    y: -2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
 	    y: -2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 0,
 	    y: -2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -1,
 	    y: -2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -2,
 	    y: -2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -2,
 	    y: -1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -2,
 	    y: 0
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -2,
@@ -63336,28 +63337,28 @@
 	    y: 3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -2,
 	    y: 3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -1,
 	    y: 3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 0,
 	    y: 3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
@@ -63371,28 +63372,28 @@
 	    y: 3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 3,
 	    y: 3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 3,
 	    y: 2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 3,
 	    y: 1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 3,
@@ -63406,14 +63407,14 @@
 	    y: -1
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 3,
 	    y: -2
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 3,
@@ -63427,21 +63428,21 @@
 	    y: -3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 1,
 	    y: -3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: 0,
 	    y: -3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -1,
@@ -63455,7 +63456,7 @@
 	    y: -3
 	  }, {
 	    g: './models/square.json',
-	    m: C.ENEMY_SQUARE_COLOR,
+	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
 	    x: -3,
