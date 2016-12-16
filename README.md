@@ -1,4 +1,4 @@
-# Square Kingdom MMO
+# Square Kingdom Game
 This is a persistent, multiplayer world of tiles, where each player tries to expand his territory of tiles from one starting tile to more tiles conquered from his neighbours.
 
 ## Install
