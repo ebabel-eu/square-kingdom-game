@@ -27,6 +27,10 @@ Browse to http://localhost:8080 or whichever port is available.
 npm run dev
 ```
 
+## Deploy to production
+
+Publish any changes to the gh-pages branch and browse to https://ebabel-eu.github.io/square-kingdom-game/
+
 ## Rules of the game
 
 - The world is also in constant expansion: a new player is placed in a new square node that is not occupied by anyone.
