@@ -11,7 +11,7 @@ module.exports = {
     // Center.
     {
       g: './models/square.json',
-      m: C.PLAYER_SQUARE_COLOR,
+      m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
       x: 0,
@@ -225,7 +225,7 @@ module.exports = {
     // Third circle.
     {
       g: './models/square.json',
-      m: C.ENEMY_SQUARE_COLOR,
+      m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
       x: -3,
@@ -265,7 +265,7 @@ module.exports = {
     },
     {
       g: './models/square.json',
-      m: C.ENEMY_SQUARE_COLOR,
+      m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
       x: 2,
@@ -305,7 +305,7 @@ module.exports = {
     },
     {
       g: './models/square.json',
-      m: C.ENEMY_SQUARE_COLOR,
+      m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
       x: 3,
@@ -329,7 +329,7 @@ module.exports = {
     },
     {
       g: './models/square.json',
-      m: C.ENEMY_SQUARE_COLOR,
+      m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
       x: 2,
@@ -361,7 +361,7 @@ module.exports = {
     },
     {
       g: './models/square.json',
-      m: C.ENEMY_SQUARE_COLOR,
+      m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
       x: -2,
