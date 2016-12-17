@@ -21,10 +21,6 @@ export const LIGHT_POSITION = {
   Z: 6,
 };
 
-// Fog.
-export const FOG_COLOR = COLORS.GREY;
-export const FOG_DENSITY = 0.05;
-
 // Camera.
 export const CAMERA_POSITION = {
   X: 0,
@@ -59,11 +55,6 @@ export const GUI = {
     MAX: 6,
     STEP: 0.1,
   },
-  FOG_DENSITY: {
-    MIN: 0,
-    MAX: 0.30,
-    STEP: 0.001,
-  }
 };
 
 // How long to wait before executing some code after the same event

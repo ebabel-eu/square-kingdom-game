@@ -1,12 +1,10 @@
-import { FogExp2, PCFSoftShadowMap } from 'three';
+import { PCFSoftShadowMap } from 'three';
 
 import * as C from '../../constants';
 import { OnWindowResize } from './on-window-resize';
 
 export const Init = (scene, renderer, camera, light, stats) => {
-  scene.fog = new FogExp2(C.FOG_COLOR, C.FOG_DENSITY);
-
-  renderer.setClearColor(scene.fog.color);
+  //renderer.setClearColor(C.COLORS.WHITE, 0);
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 

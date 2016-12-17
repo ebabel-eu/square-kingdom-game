@@ -13,7 +13,7 @@ export default class App extends Component {
     this.stats = (C.DEBUG) ? new Stats() : undefined;
     this.camera =  new PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
     this.scene = new Scene();
-    this.renderer = new WebGLRenderer();
+    this.renderer = new WebGLRenderer({ alpha: true });
 
     this.light = new SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
 

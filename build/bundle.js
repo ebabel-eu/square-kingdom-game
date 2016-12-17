@@ -19787,7 +19787,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body {\n  color: #fff;\n  font-family: Ubuntu, \"Lucida Grande\", \"Segoe UI\", \"Droid Sans\", Verdana, Arial, sans-serif;\n  font-weight: normal;\n  font-size: 16px;\n  background-color: #ccc;\n  margin: 0;\n  overflow: hidden; }\n\n.disable-select {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n", ""]);
+	exports.push([module.id, "body {\n  color: #fff;\n  font-family: Ubuntu, \"Lucida Grande\", \"Segoe UI\", \"Droid Sans\", Verdana, Arial, sans-serif;\n  font-weight: normal;\n  font-size: 16px;\n  background-color: #ccc;\n  margin: 0;\n  overflow: hidden;\n  background-image: url(/images/grass.jpg); }\n\n.disable-select {\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none; }\n", ""]);
 	
 	// exports
 
@@ -20151,7 +20151,7 @@
 	    _this.stats = C.DEBUG ? new Stats() : undefined;
 	    _this.camera = new _three.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
 	    _this.scene = new _three.Scene();
-	    _this.renderer = new _three.WebGLRenderer();
+	    _this.renderer = new _three.WebGLRenderer({ alpha: true });
 	
 	    _this.light = new _three.SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
 	
@@ -62535,10 +62535,6 @@
 	  Z: 6
 	};
 	
-	// Fog.
-	var FOG_COLOR = exports.FOG_COLOR = COLORS.GREY;
-	var FOG_DENSITY = exports.FOG_DENSITY = 0.05;
-	
 	// Camera.
 	var CAMERA_POSITION = exports.CAMERA_POSITION = {
 	  X: 0,
@@ -62572,11 +62568,6 @@
 	    MIN: 3,
 	    MAX: 6,
 	    STEP: 0.1
-	  },
-	  FOG_DENSITY: {
-	    MIN: 0,
-	    MAX: 0.30,
-	    STEP: 0.001
 	  }
 	};
 	
@@ -62606,9 +62597,7 @@
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	var Init = exports.Init = function Init(scene, renderer, camera, light, stats) {
-	  scene.fog = new _three.FogExp2(C.FOG_COLOR, C.FOG_DENSITY);
-	
-	  renderer.setClearColor(scene.fog.color);
+	  //renderer.setClearColor(C.COLORS.WHITE, 0);
 	  renderer.setPixelRatio(window.devicePixelRatio);
 	  renderer.setSize(window.innerWidth, window.innerHeight);
 	
@@ -63146,14 +63135,6 @@
 	// Note: to save storage space, the data is as concise as possible.
 	module.exports = {
 	  models: [
-	  // Board.
-	  {
-	    g: './models/board.json',
-	    cs: true,
-	    rs: true,
-	    t: './models/grass.jpg'
-	  },
-	
 	  // Center.
 	  {
 	    g: './models/square.json',
@@ -63523,9 +63504,6 @@
 	  lightFolder.add(lightController, 'positionZ', C.GUI.LIGHT_POSITION_Z.MIN, C.GUI.LIGHT_POSITION_Z.MAX, C.GUI.LIGHT_POSITION_Z.STEP).name('z').onChange(function (input) {
 	    return (0, _updateLight.updateLight)(light.position, input, 'z');
 	  });
-	
-	  // Standalone gui control.
-	  gui.add(scene.fog, 'density', C.GUI.FOG_DENSITY.MIN, C.GUI.FOG_DENSITY.MAX, C.GUI.FOG_DENSITY.STEP).name('Fog');
 	};
 
 /***/ },

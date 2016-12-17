@@ -54,12 +54,4 @@ export const Gui = (scene, light, gui) => {
       C.GUI.LIGHT_POSITION_Z.STEP)
     .name('z')
     .onChange(input => updateLight(light.position, input, 'z'));
-
-  // Standalone gui control.
-  gui
-    .add(scene.fog, 'density',
-      C.GUI.FOG_DENSITY.MIN,
-      C.GUI.FOG_DENSITY.MAX,
-      C.GUI.FOG_DENSITY.STEP)
-    .name('Fog');
 };
