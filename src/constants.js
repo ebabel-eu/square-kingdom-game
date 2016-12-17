@@ -29,7 +29,7 @@ export const FOG_DENSITY = 0.05;
 export const CAMERA_POSITION = {
   X: 0,
   Y: 0,
-  Z: 6,
+  Z: 7,
 };
 
 // Square.

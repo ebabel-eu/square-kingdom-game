@@ -8,14 +8,20 @@ import * as C from '../../constants';
 // Note: to save storage space, the data is as concise as possible.
 module.exports = {
   models: [
+    // Board.
+    {
+      g: './models/board.json',
+      cs: true,
+      rs: true,
+      t: './models/grass.jpg',
+    },
+
     // Center.
     {
       g: './models/square.json',
       m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
-      x: 0,
-      y: 0,
     },
 
     // First circle.

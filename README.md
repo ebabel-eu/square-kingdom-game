@@ -73,3 +73,8 @@ Publish any changes to the gh-pages branch and browse to https://ebabel-eu.githu
 - Pixel to hexagon: http://www.redblobgames.com/grids/hexagons/more-pixel-to-hex.html 
 - Interesting notes on hex grids: http://www.gamasutra.com/blogs/HermanTulleken/20140912/225495/20_Fun_Grid_Facts_Hex_Grids.php
 - Time based (delta) animation: https://www.viget.com/articles/time-based-animation
+
+## Attributions
+
+- Texture 461223153.jpg: http://opengameart.org/node/7863
+- Textures MysteryemWarzone2100Textures: http://opengameart.org/content/29-grounds-and-walls-and-water-1024x1024
