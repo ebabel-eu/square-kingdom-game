@@ -5,6 +5,7 @@ import * as C from '../../constants';
 import { Init } from './init';
 import { LoadModels } from './load-models';
 import { Gui } from '../gui/gui';
+import MouseControl from '../mouse-control/mouse-control';
 
 export default class App extends Component {
   constructor(props) {
@@ -16,6 +17,8 @@ export default class App extends Component {
     this.renderer = new WebGLRenderer({ alpha: true });
 
     this.light = new SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
+
+    this.mouseControl = new MouseControl();
 
     this.animate = this.animate.bind(this);
   }

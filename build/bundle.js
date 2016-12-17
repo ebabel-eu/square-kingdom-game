@@ -19778,6 +19778,10 @@
 	
 	var _gui = __webpack_require__(167);
 	
+	var _mouseControl = __webpack_require__(171);
+	
+	var _mouseControl2 = _interopRequireDefault(_mouseControl);
+	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -19802,6 +19806,8 @@
 	    _this.renderer = new _three.WebGLRenderer({ alpha: true });
 	
 	    _this.light = new _three.SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
+	
+	    _this.mouseControl = new _mouseControl2.default();
 	
 	    _this.animate = _this.animate.bind(_this);
 	    return _this;
@@ -62221,7 +62227,10 @@
 	
 	// How long to wait before executing some code after the same event
 	// has stopped being fired for a constant number of miliseconds.
-	var DEBOUNCE = exports.DEBOUNCE = 250;
+	var DEBOUNCE = exports.DEBOUNCE = {
+	  SLOW: 250,
+	  FAST: 50
+	};
 
 /***/ },
 /* 162 */
@@ -62241,12 +62250,6 @@
 	var C = _interopRequireWildcard(_constants);
 	
 	var _onWindowResize = __webpack_require__(163);
-	
-	var _mouseControl = __webpack_require__(171);
-	
-	var _mouseControl2 = _interopRequireDefault(_mouseControl);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -62282,9 +62285,6 @@
 	    container.appendChild(stats.dom);
 	  }
 	
-	  // Mouse control.
-	  var mouseControl = new _mouseControl2.default();
-	
 	  // Handle windows resize (debounced).
 	  window.addEventListener('resize', function () {
 	    return (0, _onWindowResize.OnWindowResize)(camera, renderer);
@@ -62319,7 +62319,7 @@
 	  camera.updateProjectionMatrix();
 	
 	  renderer.setSize(window.innerWidth, window.innerHeight);
-	}, C.DEBOUNCE);
+	}, C.DEBOUNCE.SLOW);
 
 /***/ },
 /* 164 */
@@ -63284,9 +63284,7 @@
 	
 	  mouse.x = event.clientX / window.innerWidth * 2 - 1;
 	  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-	
-	  console.log('x: ' + mouse.x + ' y: ' + mouse.y);
-	}, C.DEBOUNCE);
+	}, C.DEBOUNCE.FAST);
 
 /***/ }
 /******/ ]);

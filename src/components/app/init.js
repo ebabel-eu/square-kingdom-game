@@ -2,7 +2,6 @@ import { PCFSoftShadowMap } from 'three';
 
 import * as C from '../../constants';
 import { OnWindowResize } from './on-window-resize';
-import MouseControl from '../mouse-control/mouse-control';
 
 export const Init = (scene, renderer, camera, light, stats) => {
   renderer.setPixelRatio(window.devicePixelRatio);
@@ -43,9 +42,6 @@ export const Init = (scene, renderer, camera, light, stats) => {
   if (stats && stats.dom) {
     container.appendChild(stats.dom);
   }
-
-  // Mouse control.
-  const mouseControl = new MouseControl();
 
   // Handle windows resize (debounced).
   window.addEventListener('resize', () => OnWindowResize(camera, renderer), false);
