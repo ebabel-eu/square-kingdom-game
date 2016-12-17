@@ -1,3 +1,6 @@
+// Debug mode?
+export const DEBUG = true;
+
 // Define the whole color scheme in this one place.
 export const COLORS = {
   WHITE: 0xFFFFFF,
@@ -14,8 +17,8 @@ export const LIGHT_INTENSITY = 1.25;
 export const LIGHT_ANGLE = Math.PI / 4;
 export const LIGHT_POSITION = {
   X: 3,
-  Y: 3,
-  Z: 3,
+  Y: 6,
+  Z: 6,
 };
 
 // Fog.
@@ -57,7 +60,7 @@ export const GUI = {
     STEP: 0.1,
   },
   FOG_DENSITY: {
-    MIN: 0.05,
+    MIN: 0,
     MAX: 0.30,
     STEP: 0.001,
   }

@@ -41,7 +41,9 @@ export const Init = (scene, renderer, camera, light, stats) => {
   renderer.shadowMap.type = PCFSoftShadowMap;
 
   // Stats.
-  container.appendChild(stats.dom);
+  if (stats && stats.dom) {
+    container.appendChild(stats.dom);
+  }
 
   // Handle windows resize.
   window.addEventListener('resize', () => OnWindowResize(camera, renderer), false);

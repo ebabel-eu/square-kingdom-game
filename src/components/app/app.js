@@ -10,7 +10,7 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    this.stats = new Stats();
+    this.stats = (C.DEBUG) ? new Stats() : undefined;
     this.camera =  new PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
     this.scene = new Scene();
     this.renderer = new WebGLRenderer();
@@ -26,7 +26,10 @@ export default class App extends Component {
 
   animate() {
     requestAnimationFrame(this.animate);
-    this.stats.update();
+
+    if (this.stats) {
+      this.stats.update();
+    }
 
     this.threeRender();
   }
@@ -38,7 +41,9 @@ export default class App extends Component {
 
     this.animate();
 
-    Gui(this.scene, this.light);
+    if (C.DEBUG) {
+      Gui(this.scene, this.light);
+    }
   }
 
   render() {
