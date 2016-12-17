@@ -35,7 +35,7 @@ Publish any changes to the gh-pages branch and browse to https://ebabel-eu.githu
 
 ### Start of the game
 
-- The board is made of 42 squares arranged in a 7 x 7 grid and 7 gaps.
+- The board is made of 42 squares arranged in a 7 x 7 grid with 7 gaps.
 - The player (green) starts anywhere by clicking a neutral square (yellow).
 - The AI (red) picks a starting square that isn't the one taken by the player.
 - The aim is to take all 42 squares.

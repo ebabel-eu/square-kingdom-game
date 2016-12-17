@@ -1,6 +1,6 @@
 import debounce from 'lodash.debounce';
 
-import * as C from '../../constants';
+import * as C from '../constants';
 
 export const OnWindowResize = debounce((camera, renderer) => {
   camera.aspect = window.innerWidth / window.innerHeight;

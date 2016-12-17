@@ -33,6 +33,8 @@ export const PLAYER_SQUARE_COLOR = COLORS.GREEN;
 export const ENEMY_SQUARE_COLOR = COLORS.RED;
 export const NEUTRAL_SQUARE_COLOR = COLORS.AMBER;
 
+export const HIGHLIGHT = COLORS.GREEN;
+
 // GUI.
 export const GUI = {
   LIGHT_INTENSITY: {
@@ -61,5 +63,5 @@ export const GUI = {
 // has stopped being fired for a constant number of miliseconds.
 export const DEBOUNCE = {
   SLOW: 250,
-  FAST: 50,
+  FAST: 10,
 };

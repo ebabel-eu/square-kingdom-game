@@ -1,13 +1,13 @@
 import { PCFSoftShadowMap } from 'three';
 
-import * as C from '../../constants';
+import * as C from '../constants';
 import { OnWindowResize } from './on-window-resize';
 
 export const Init = (scene, renderer, camera, light, stats) => {
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
-  const container = document.getElementById('container');
+  const container = document.getElementById('skg-container');
   container.appendChild(renderer.domElement);
 
   // Camera.

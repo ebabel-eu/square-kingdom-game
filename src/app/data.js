@@ -1,4 +1,4 @@
-import * as C from '../../constants';
+import * as C from '../constants';
 
 // JSON data for all models: where to load their geometry and what their material is.
 // @g: geometry path.

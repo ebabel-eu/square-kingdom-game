@@ -1,4 +1,4 @@
-import * as C from '../../constants';
+import * as C from '../constants';
 import { clear } from './clear';
 import { updateLightColor } from './update-light-color';
 import { updateLight } from './update-light';

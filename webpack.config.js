@@ -9,25 +9,17 @@ module.exports = {
     filename: '[name].js',
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.scss', '.css'],
+    extensions: ['', '.js', '.jsx'],
   },
   module: {
     loaders: [
       {
-        test: /\.js|jsx?$/,
+        test: /\.js?$/,
         exclude: /(node_modules)/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react'],
+          presets: ['es2015'],
         },
-      },
-      {
-        test: /\.scss$/,
-        loader: 'style!css!sass',
-      },
-      {
-        test: /\.css$/,
-        loader: 'style!css?',
       },
     ],
   },
