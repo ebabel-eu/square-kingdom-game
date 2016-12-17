@@ -2,15 +2,16 @@ import { PCFSoftShadowMap } from 'three';
 
 import * as C from '../../constants';
 import { OnWindowResize } from './on-window-resize';
+import MouseControl from '../mouse-control/mouse-control';
 
 export const Init = (scene, renderer, camera, light, stats) => {
-  //renderer.setClearColor(C.COLORS.WHITE, 0);
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   const container = document.getElementById('container');
   container.appendChild(renderer.domElement);
 
+  // Camera.
   camera.position.set(
     C.CAMERA_POSITION.X,
     C.CAMERA_POSITION.Y,
@@ -43,6 +44,9 @@ export const Init = (scene, renderer, camera, light, stats) => {
     container.appendChild(stats.dom);
   }
 
-  // Handle windows resize.
+  // Mouse control.
+  const mouseControl = new MouseControl();
+
+  // Handle windows resize (debounced).
   window.addEventListener('resize', () => OnWindowResize(camera, renderer), false);
 };

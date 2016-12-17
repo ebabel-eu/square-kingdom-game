@@ -52,7 +52,7 @@
 	
 	var _reactDom = __webpack_require__(158);
 	
-	var _app = __webpack_require__(163);
+	var _app = __webpack_require__(159);
 	
 	var _app2 = _interopRequireDefault(_app);
 	
@@ -19751,11 +19751,7 @@
 
 
 /***/ },
-/* 159 */,
-/* 160 */,
-/* 161 */,
-/* 162 */,
-/* 163 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19770,17 +19766,17 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _three = __webpack_require__(164);
+	var _three = __webpack_require__(160);
 	
-	var _constants = __webpack_require__(165);
+	var _constants = __webpack_require__(161);
 	
 	var C = _interopRequireWildcard(_constants);
 	
-	var _init = __webpack_require__(166);
+	var _init = __webpack_require__(162);
 	
-	var _loadModels = __webpack_require__(169);
+	var _loadModels = __webpack_require__(165);
 	
-	var _gui = __webpack_require__(171);
+	var _gui = __webpack_require__(167);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -19853,7 +19849,7 @@
 	exports.default = App;
 
 /***/ },
-/* 164 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	(function (global, factory) {
@@ -62156,7 +62152,7 @@
 
 
 /***/ },
-/* 165 */
+/* 161 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -62165,7 +62161,7 @@
 	  value: true
 	});
 	// Debug mode?
-	var DEBUG = exports.DEBUG = true;
+	var DEBUG = exports.DEBUG = false;
 	
 	// Define the whole color scheme in this one place.
 	var COLORS = exports.COLORS = {
@@ -62228,7 +62224,7 @@
 	var DEBOUNCE = exports.DEBOUNCE = 250;
 
 /***/ },
-/* 166 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62238,24 +62234,30 @@
 	});
 	exports.Init = undefined;
 	
-	var _three = __webpack_require__(164);
+	var _three = __webpack_require__(160);
 	
-	var _constants = __webpack_require__(165);
+	var _constants = __webpack_require__(161);
 	
 	var C = _interopRequireWildcard(_constants);
 	
-	var _onWindowResize = __webpack_require__(167);
+	var _onWindowResize = __webpack_require__(163);
+	
+	var _mouseControl = __webpack_require__(171);
+	
+	var _mouseControl2 = _interopRequireDefault(_mouseControl);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
 	var Init = exports.Init = function Init(scene, renderer, camera, light, stats) {
-	  //renderer.setClearColor(C.COLORS.WHITE, 0);
 	  renderer.setPixelRatio(window.devicePixelRatio);
 	  renderer.setSize(window.innerWidth, window.innerHeight);
 	
 	  var container = document.getElementById('container');
 	  container.appendChild(renderer.domElement);
 	
+	  // Camera.
 	  camera.position.set(C.CAMERA_POSITION.X, C.CAMERA_POSITION.Y, C.CAMERA_POSITION.Z);
 	
 	  // Light.
@@ -62280,14 +62282,17 @@
 	    container.appendChild(stats.dom);
 	  }
 	
-	  // Handle windows resize.
+	  // Mouse control.
+	  var mouseControl = new _mouseControl2.default();
+	
+	  // Handle windows resize (debounced).
 	  window.addEventListener('resize', function () {
 	    return (0, _onWindowResize.OnWindowResize)(camera, renderer);
 	  }, false);
 	};
 
 /***/ },
-/* 167 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62297,11 +62302,11 @@
 	});
 	exports.OnWindowResize = undefined;
 	
-	var _lodash = __webpack_require__(168);
+	var _lodash = __webpack_require__(164);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _constants = __webpack_require__(165);
+	var _constants = __webpack_require__(161);
 	
 	var C = _interopRequireWildcard(_constants);
 	
@@ -62317,7 +62322,7 @@
 	}, C.DEBOUNCE);
 
 /***/ },
-/* 168 */
+/* 164 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -62701,7 +62706,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 169 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62711,9 +62716,9 @@
 	});
 	exports.LoadModels = undefined;
 	
-	var _three = __webpack_require__(164);
+	var _three = __webpack_require__(160);
 	
-	var _data = __webpack_require__(170);
+	var _data = __webpack_require__(166);
 	
 	var _data2 = _interopRequireDefault(_data);
 	
@@ -62768,12 +62773,12 @@
 	};
 
 /***/ },
-/* 170 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _constants = __webpack_require__(165);
+	var _constants = __webpack_require__(161);
 	
 	var C = _interopRequireWildcard(_constants);
 	
@@ -63100,7 +63105,7 @@
 	};
 
 /***/ },
-/* 171 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63110,15 +63115,15 @@
 	});
 	exports.Gui = undefined;
 	
-	var _constants = __webpack_require__(165);
+	var _constants = __webpack_require__(161);
 	
 	var C = _interopRequireWildcard(_constants);
 	
-	var _clear = __webpack_require__(172);
+	var _clear = __webpack_require__(168);
 	
-	var _updateLightColor = __webpack_require__(173);
+	var _updateLightColor = __webpack_require__(169);
 	
-	var _updateLight = __webpack_require__(174);
+	var _updateLight = __webpack_require__(170);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -63159,7 +63164,7 @@
 	};
 
 /***/ },
-/* 172 */
+/* 168 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -63179,7 +63184,7 @@
 	};
 
 /***/ },
-/* 173 */
+/* 169 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63205,7 +63210,7 @@
 	};
 
 /***/ },
-/* 174 */
+/* 170 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -63219,6 +63224,69 @@
 	    light[property] = input;
 	  }
 	};
+
+/***/ },
+/* 171 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _three = __webpack_require__(160);
+	
+	var _onMouseMove = __webpack_require__(172);
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var MouseControl = function MouseControl() {
+	  var _this = this;
+	
+	  _classCallCheck(this, MouseControl);
+	
+	  this.mouse = new _three.Vector2();
+	
+	  // Handle mouse move (debounced).
+	  window.addEventListener('mousemove', function (event) {
+	    return (0, _onMouseMove.OnMouseMove)(event, _this.mouse);
+	  }, false);
+	};
+	
+	exports.default = MouseControl;
+
+/***/ },
+/* 172 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.OnMouseMove = undefined;
+	
+	var _lodash = __webpack_require__(164);
+	
+	var _lodash2 = _interopRequireDefault(_lodash);
+	
+	var _constants = __webpack_require__(161);
+	
+	var C = _interopRequireWildcard(_constants);
+	
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var OnMouseMove = exports.OnMouseMove = (0, _lodash2.default)(function (event, mouse) {
+	  event.preventDefault();
+	
+	  mouse.x = event.clientX / window.innerWidth * 2 - 1;
+	  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+	
+	  console.log('x: ' + mouse.x + ' y: ' + mouse.y);
+	}, C.DEBOUNCE);
 
 /***/ }
 /******/ ]);

@@ -1,5 +1,5 @@
 // Debug mode?
-export const DEBUG = true;
+export const DEBUG = false;
 
 // Define the whole color scheme in this one place.
 export const COLORS = {
