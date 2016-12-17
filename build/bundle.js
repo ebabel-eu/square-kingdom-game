@@ -63242,13 +63242,6 @@
 	    m: C.NEUTRAL_SQUARE_COLOR,
 	    cs: true,
 	    rs: true,
-	    x: 0,
-	    y: 2
-	  }, {
-	    g: './models/square.json',
-	    m: C.NEUTRAL_SQUARE_COLOR,
-	    cs: true,
-	    rs: true,
 	    x: 1,
 	    y: 2
 	  }, {
@@ -63258,27 +63251,6 @@
 	    rs: true,
 	    x: 2,
 	    y: 2
-	  }, {
-	    g: './models/square.json',
-	    m: C.NEUTRAL_SQUARE_COLOR,
-	    cs: true,
-	    rs: true,
-	    x: 2,
-	    y: 1
-	  }, {
-	    g: './models/square.json',
-	    m: C.NEUTRAL_SQUARE_COLOR,
-	    cs: true,
-	    rs: true,
-	    x: 2,
-	    y: 0
-	  }, {
-	    g: './models/square.json',
-	    m: C.NEUTRAL_SQUARE_COLOR,
-	    cs: true,
-	    rs: true,
-	    x: 2,
-	    y: -1
 	  }, {
 	    g: './models/square.json',
 	    m: C.NEUTRAL_SQUARE_COLOR,
@@ -63314,27 +63286,6 @@
 	    rs: true,
 	    x: -2,
 	    y: -2
-	  }, {
-	    g: './models/square.json',
-	    m: C.NEUTRAL_SQUARE_COLOR,
-	    cs: true,
-	    rs: true,
-	    x: -2,
-	    y: -1
-	  }, {
-	    g: './models/square.json',
-	    m: C.NEUTRAL_SQUARE_COLOR,
-	    cs: true,
-	    rs: true,
-	    x: -2,
-	    y: 0
-	  }, {
-	    g: './models/square.json',
-	    m: C.NEUTRAL_SQUARE_COLOR,
-	    cs: true,
-	    rs: true,
-	    x: -2,
-	    y: 1
 	  },
 	
 	  // Third circle.
