@@ -14,6 +14,7 @@ module.exports = {
       m: C.NEUTRAL_SQUARE_COLOR,
       cs: true,
       rs: true,
+      n: 'x0y0',
     },
 
     // First circle.
@@ -24,6 +25,7 @@ module.exports = {
       rs: true,
       x: -1,
       y: 1,
+      n: 'x-1y1',
     },
     {
       g: './models/square.json',
@@ -32,6 +34,7 @@ module.exports = {
       rs: true,
       x: 0,
       y: 1,
+      n: 'x0y1',
     },
     {
       g: './models/square.json',
@@ -40,6 +43,7 @@ module.exports = {
       rs: true,
       x: 1,
       y: 1,
+      n: 'x1y1',
     },
     {
       g: './models/square.json',
@@ -48,6 +52,7 @@ module.exports = {
       rs: true,
       x: 1,
       y: 0,
+      n: 'x1y0',
     },
     {
       g: './models/square.json',
@@ -56,14 +61,7 @@ module.exports = {
       rs: true,
       x: 1,
       y: -1,
-    },
-    {
-      g: './models/square.json',
-      m: C.NEUTRAL_SQUARE_COLOR,
-      cs: true,
-      rs: true,
-      x: 1,
-      y: -1,
+      n: 'x1y-1',
     },
     {
       g: './models/square.json',
@@ -72,6 +70,7 @@ module.exports = {
       rs: true,
       x: 0,
       y: -1,
+      n: 'x0y-1',
     },
     {
       g: './models/square.json',
@@ -80,6 +79,7 @@ module.exports = {
       rs: true,
       x: -1,
       y: -1,
+      n: 'x-1y-1',
     },
     {
       g: './models/square.json',
@@ -88,6 +88,7 @@ module.exports = {
       rs: true,
       x: -1,
       y: 0,
+      n: 'x-1y0',
     },
 
     // Second circle.
@@ -98,6 +99,7 @@ module.exports = {
       rs: true,
       x: -2,
       y: 2,
+      n: 'x-2y2',
     },
     {
       g: './models/square.json',
@@ -106,6 +108,7 @@ module.exports = {
       rs: true,
       x: -1,
       y: 2,
+      n: 'x-1y2',
     },
 
     {
@@ -115,6 +118,7 @@ module.exports = {
       rs: true,
       x: 1,
       y: 2,
+      n: 'x1y2',
     },
     {
       g: './models/square.json',
@@ -123,6 +127,7 @@ module.exports = {
       rs: true,
       x: 2,
       y: 2,
+      n: 'x2y2',
     },
     {
       g: './models/square.json',
@@ -131,6 +136,7 @@ module.exports = {
       rs: true,
       x: 2,
       y: -2,
+      n: 'x2y-2',
     },
     {
       g: './models/square.json',
@@ -139,6 +145,7 @@ module.exports = {
       rs: true,
       x: 1,
       y: -2,
+      n: 'x1y-2',
     },
     {
       g: './models/square.json',
@@ -147,6 +154,7 @@ module.exports = {
       rs: true,
       x: 0,
       y: -2,
+      n: 'x0y-2',
     },
     {
       g: './models/square.json',
@@ -155,6 +163,7 @@ module.exports = {
       rs: true,
       x: -1,
       y: -2,
+      n: 'x-1y-2',
     },
     {
       g: './models/square.json',
@@ -163,6 +172,7 @@ module.exports = {
       rs: true,
       x: -2,
       y: -2,
+      n: 'x-2y-2',
     },
 
     // Third circle.
@@ -173,6 +183,7 @@ module.exports = {
       rs: true,
       x: -3,
       y: 3,
+      n: 'x-3y3',
     },
     {
       g: './models/square.json',
@@ -181,6 +192,7 @@ module.exports = {
       rs: true,
       x: -2,
       y: 3,
+      n: 'x-2y3',
     },
     {
       g: './models/square.json',
@@ -189,6 +201,7 @@ module.exports = {
       rs: true,
       x: -1,
       y: 3,
+      n: 'x-1y3',
     },
     {
       g: './models/square.json',
@@ -197,6 +210,7 @@ module.exports = {
       rs: true,
       x: 0,
       y: 3,
+      n: 'x0y3',
     },
     {
       g: './models/square.json',
@@ -205,6 +219,7 @@ module.exports = {
       rs: true,
       x: 1,
       y: 3,
+      n: 'x1y3',
     },
     {
       g: './models/square.json',
@@ -213,6 +228,7 @@ module.exports = {
       rs: true,
       x: 2,
       y: 3,
+      n: 'x2y3',
     },
     {
       g: './models/square.json',
@@ -221,6 +237,7 @@ module.exports = {
       rs: true,
       x: 3,
       y: 3,
+      n: 'x3y3',
     },
     {
       g: './models/square.json',
@@ -229,6 +246,7 @@ module.exports = {
       rs: true,
       x: 3,
       y: 2,
+      n: 'x3y2',
     },
     {
       g: './models/square.json',
@@ -237,6 +255,7 @@ module.exports = {
       rs: true,
       x: 3,
       y: 1,
+      n: 'x3y1',
     },
     {
       g: './models/square.json',
@@ -245,6 +264,7 @@ module.exports = {
       rs: true,
       x: 3,
       y: 0,
+      n: 'x3y0',
     },
     {
       g: './models/square.json',
@@ -253,6 +273,7 @@ module.exports = {
       rs: true,
       x: 3,
       y: -1,
+      n: 'x3y-1',
     },
     {
       g: './models/square.json',
@@ -261,6 +282,7 @@ module.exports = {
       rs: true,
       x: 3,
       y: -2,
+      n: 'x3y-2',
     },
     {
       g: './models/square.json',
@@ -269,6 +291,7 @@ module.exports = {
       rs: true,
       x: 3,
       y: -3,
+      n: 'x3y-3',
     },
     {
       g: './models/square.json',
@@ -277,6 +300,7 @@ module.exports = {
       rs: true,
       x: 2,
       y: -3,
+      n: 'x2y-3',
     },
     {
       g: './models/square.json',
@@ -285,6 +309,7 @@ module.exports = {
       rs: true,
       x: 1,
       y: -3,
+      n: 'x1y-3',
     },
     {
       g: './models/square.json',
@@ -293,6 +318,7 @@ module.exports = {
       rs: true,
       x: 0,
       y: -3,
+      n: 'x0y-3',
     },
     {
       g: './models/square.json',
@@ -301,6 +327,7 @@ module.exports = {
       rs: true,
       x: -1,
       y: -3,
+      n: 'x-1y-3',
     },
     {
       g: './models/square.json',
@@ -309,6 +336,7 @@ module.exports = {
       rs: true,
       x: -2,
       y: -3,
+      n: 'x-2y-3',
     },
     {
       g: './models/square.json',
@@ -317,6 +345,7 @@ module.exports = {
       rs: true,
       x: -3,
       y: -3,
+      n: 'x-3y-3',
     },
     {
       g: './models/square.json',
@@ -325,6 +354,7 @@ module.exports = {
       rs: true,
       x: -3,
       y: -2,
+      n: 'x-3y-2',
     },
     {
       g: './models/square.json',
@@ -333,6 +363,7 @@ module.exports = {
       rs: true,
       x: -3,
       y: -1,
+      n: 'x-3y-1',
     },
     {
       g: './models/square.json',
@@ -341,6 +372,7 @@ module.exports = {
       rs: true,
       x: -3,
       y: 0,
+      n: 'x-3y0',
     },
     {
       g: './models/square.json',
@@ -349,6 +381,7 @@ module.exports = {
       rs: true,
       x: -3,
       y: 1,
+      n: 'x-3y1',
     },
     {
       g: './models/square.json',
@@ -357,8 +390,7 @@ module.exports = {
       rs: true,
       x: -3,
       y: 2,
+      n: 'x-3y2',
     },
-
-
   ],
 };

@@ -5,7 +5,7 @@ import { Rollover } from './rollover';
 
 export default class MouseControl {
   constructor() {
-    this.rollover = Rollover.bind(this);
+    this.rollover = Rollover;
 
     this.mouse = new Vector2();
 

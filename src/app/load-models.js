@@ -41,6 +41,8 @@ const createMesh = (material, model, scene) => {
     mesh.castShadow = model.cs;
     mesh.receiveShadow = model.rs;
 
+    mesh.name = model.n || Date.now();
+
     scene.add(mesh);
   });
 };
