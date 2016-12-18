@@ -9,7 +9,6 @@ const updateMaterial = (intersected, hexColor) => {
 const updateIntersected = object => {
   intersected = object;
   intersected.currentHex = intersected.material.color.getHex();
-  updateMaterial(intersected, C.HIGHLIGHT);
 };
 
 export const Rollover = (mouseControl, camera, raycaster, scene) => {
@@ -22,6 +21,7 @@ export const Rollover = (mouseControl, camera, raycaster, scene) => {
   // Raycaster has found something but nothing is tracked by "intersected".
   if (intersects.length > 0 && intersected === undefined) {
     updateIntersected(intersects[0].object);
+    updateMaterial(intersected, C.HIGHLIGHT);
   }
 
   // There is an object tracked by "intersected" and it is not the one found by the raycaster.
@@ -29,6 +29,7 @@ export const Rollover = (mouseControl, camera, raycaster, scene) => {
       && intersected.uuid !== intersects[0].object.uuid) {
     updateMaterial(intersected, intersected.currentHex);
     updateIntersected(intersects[0].object);
+    updateMaterial(intersected, C.HIGHLIGHT);
   }
 
   // There is an object tracked but raycaster finds nothing.
