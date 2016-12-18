@@ -19,7 +19,9 @@ export default class App {
     this.mouseControl = new MouseControl();
 
     this.animate = this.animate.bind(this);
+  }
 
+  start() {
     Init(this.scene, this.renderer, this.camera, this.light, this.stats);
 
     LoadModels(this.scene);
