@@ -1,5 +1,3 @@
-import * as C from '../constants';
-
 export const OnMouseMove = (event, mouseControl) => {
   event.preventDefault();
 

@@ -27,6 +27,12 @@ Browse to http://localhost:8080 or whichever port is available.
 npm run dev
 ```
 
+## Linting and testing
+
+```
+npm test
+```
+
 ## Deploy to production
 
 Publish any changes to the gh-pages branch and browse to https://ebabel-eu.github.io/square-kingdom-game/

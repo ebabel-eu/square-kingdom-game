@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	var _app = __webpack_require__(1);
 	
@@ -43589,21 +43589,13 @@
 
 /***/ },
 /* 14 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.OnMouseMove = undefined;
-	
-	var _constants = __webpack_require__(3);
-	
-	var C = _interopRequireWildcard(_constants);
-	
-	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-	
 	var OnMouseMove = exports.OnMouseMove = function OnMouseMove(event, mouseControl) {
 	  event.preventDefault();
 	
