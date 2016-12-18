@@ -43659,6 +43659,12 @@
 	    updateMaterial(intersected, intersected.currentHex);
 	    updateIntersected(intersects[0].object);
 	  }
+	
+	  // There is an object tracked but raycaster finds nothing.
+	  if (intersects.length === 0 && intersected) {
+	    updateMaterial(intersected, intersected.currentHex);
+	    intersected = undefined;
+	  }
 	};
 
 /***/ }
