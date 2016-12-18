@@ -7,4 +7,4 @@ export const OnWindowResize = debounce((camera, renderer) => {
   camera.updateProjectionMatrix();
 
   renderer.setSize(window.innerWidth, window.innerHeight);
-}, C.DEBOUNCE.SLOW);
+}, C.DEBOUNCE);

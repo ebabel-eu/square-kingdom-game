@@ -61,7 +61,4 @@ export const GUI = {
 
 // How long to wait before executing some code after the same event
 // has stopped being fired for a constant number of miliseconds.
-export const DEBOUNCE = {
-  SLOW: 250,
-  FAST: 10,
-};
+export const DEBOUNCE = 250;

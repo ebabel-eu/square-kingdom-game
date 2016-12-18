@@ -13,7 +13,6 @@ export default class App {
     this.scene = new Scene();
     this.renderer = new WebGLRenderer({ alpha: true });
     this.raycaster = new Raycaster();
-    this.intersected = undefined;
 
     this.light = new SpotLight(C.LIGHT_COLOR, C.LIGHT_INTENSITY);
 
@@ -36,7 +35,7 @@ export default class App {
     this.renderer.render(this.scene, this.camera);
 
     if (this.mouseControl.shouldRollover) {
-      this.mouseControl.rollover(this.mouseControl, this.camera, this.raycaster, this.scene, this.intersected);
+      this.mouseControl.rollover(this.mouseControl, this.camera, this.raycaster, this.scene);
     }
   }
 
